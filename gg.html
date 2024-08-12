@@ -1,0 +1,273 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Best Offers - JGnest.com</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .header {
+            padding: 20px;
+            background-color: #fffe22;
+            text-align: center;
+            position: relative;
+        }
+        .header h1 {
+            font-size: 36px;
+            margin: 0;
+            line-height: 1.2;
+        }
+        .header span {
+            display: inline-block;
+            animation: dance 1s infinite;
+        }
+        @keyframes dance {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+        .header span:nth-child(odd) { color: #e91e63; }
+        .header span:nth-child(even) { color: #9c27b0; }
+
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .offer {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            padding: 15px;
+            background-color: #2196f3; /* Consistent color for all containers */
+            position: relative;
+            animation: dance 2s infinite;
+        }
+        .offer h2 {
+            margin-top: 0;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: inherit; /* Ensures the background color set by inline styles applies */
+        }
+        .offer p {
+            font-size: 16px;
+            margin: 10px 0;
+            color: white;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            color: #fff;
+            background-color: #ff5722;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 16px;
+            text-align: center;
+            cursor: pointer;
+            margin-top: 10px;
+            position: absolute;
+            bottom: 15px;
+            right: 15px;
+            transition: background-color 0.3s;
+        }
+        .button:hover {
+            background-color: #e64a19;
+        }
+        .quantity {
+            margin-top: 10px;
+        }
+        .quantity select {
+            padding: 5px;
+            border: 1px solid #ddd;
+            border-radius: 3px;
+            width: 80px;
+            font-size: 16px;
+        }
+        .price-info {
+            margin-top: 10px;
+            color: white;
+            font-size: 16px;
+        }
+        .join-group {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: #25D366;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 16px;
+        }
+        .join-group:hover {
+            background-color: #128C7E;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>
+            <span>J</span><span>G</span><span>n</span><span>e</span><span>s</span><span>t</span><span>.</span>
+            <span>c</span><span>o</span><span>m</span><span> - </span>
+            <span>A</span><span>s</span><span>s</span><span>a</span><span>m</span>
+            <span> </span><span>B</span><span>e</span><span>s</span><span>t</span>
+            <span> </span><span>S</span><span>o</span><span>c</span><span>i</span><span>a</span><span>l</span>
+            <span> </span><span>M</span><span>e</span><span>d</span><span>i</span><span>a</span>
+            <span> </span><span>S</span><span>e</span><span>r</span><span>v</span><span>i</span><span>c</span><span>e</span>
+        </h1>
+        <a href="https://chat.whatsapp.com/KME8yk6rlIxBRfWkvmGVZB" class="join-group" target="_blank">Join Our WhatsApp Group</a>
+    </div>
+    <div class="container">
+        <h1>Best Offers ??</h1>
+        <div class="offer" id="offer1">
+            <h2>Instagram 1k ?? Like</h2>
+            <p class="price-info">Price per 1k: Rs. 32</p>
+            <div class="quantity">
+                <select id="quantity1" onchange="updatePrice(1, 32)">
+                    <option value="">Select Quantity</option>
+                    <option value="1k">1k</option>
+                    <option value="2k">2k</option>
+                    <option value="5k">5k</option>
+                    <option value="10k">10k</option>
+                    <option value="20k">20k</option>
+                    <option value="50k">50k</option>
+                    <option value="100k">100k</option>
+                </select>
+            </div>
+            <div class="price-info" id="price1">Total: Rs. 32</div>
+            <a href="#" onclick="return validateAndRedirect(1, 32)" class="button">Buy Now</a>
+        </div>
+        <div class="offer" id="offer2">
+            <h2>1K ?? View</h2>
+            <p class="price-info">Price per 1k: Rs. 28</p>
+            <div class="quantity">
+                <select id="quantity2" onchange="updatePrice(2, 28)">
+                    <option value="">Select Quantity</option>
+                    <option value="1k">1k</option>
+                    <option value="2k">2k</option>
+                    <option value="5k">5k</option>
+                    <option value="10k">10k</option>
+                    <option value="20k">20k</option>
+                    <option value="50k">50k</option>
+                    <option value="100k">100k</option>
+                </select>
+            </div>
+            <div class="price-info" id="price2">Total: Rs. 28</div>
+            <a href="#" onclick="return validateAndRedirect(2, 28)" class="button">Buy Now</a>
+        </div>
+        <div class="offer" id="offer3">
+            <h2>Lifetime Stable Facebook Classic Page Follower</h2>
+            <p class="price-info">Price per 1k: Rs. 389</p>
+            <div class="quantity">
+                <select id="quantity3" onchange="updatePrice(3, 389)">
+                    <option value="">Select Quantity</option>
+                    <option value="1k">1k</option>
+                    <option value="2k">2k</option>
+                    <option value="5k">5k</option>
+                    <option value="10k">10k</option>
+                    <option value="20k">20k</option>
+                    <option value="50k">50k</option>
+                    <option value="100k">100k</option>
+                </select>
+            </div>
+            <div class="price-info" id="price3">Total: Rs. 389</div>
+            <a href="#" onclick="return validateAndRedirect(3, 389)" class="button">Buy Now</a>
+        </div>
+        <div class="offer" id="offer4">
+            <h2>1k YouTube Views ??</h2>
+            <p class="price-info">Price per 1k: Rs. 210</p>
+            <div class="quantity">
+                <select id="quantity4" onchange="updatePrice(4, 210)">
+                    <option value="">Select Quantity</option>
+                    <option value="1k">1k</option>
+                    <option value="2k">2k</option>
+                    <option value="5k">5k</option>
+                    <option value="10k">10k</option>
+                    <option value="20k">20
+
+k</option>
+                    <option value="50k">50k</option>
+                    <option value="100k">100k</option>
+                </select>
+            </div>
+            <div class="price-info" id="price4">Total: Rs. 210</div>
+            <a href="#" onclick="return validateAndRedirect(4, 210)" class="button">Buy Now</a>
+        </div>
+    </div>
+
+    <script>
+        function updatePrice(id, pricePerUnit) {
+            const quantitySelect = document.getElementById(`quantity${id}`);
+            const quantity = quantitySelect.value;
+            let quantityValue = 0;
+
+            switch (quantity) {
+                case '1k': quantityValue = 1000; break;
+                case '2k': quantityValue = 2000; break;
+                case '2k': quantityValue = 2000; break;
+                case '5k': quantityValue = 5000; break;
+                case '10k': quantityValue = 10000; break;
+                case '20k': quantityValue = 20000; break;
+                case '50k': quantityValue = 50000; break;
+                case '100k': quantityValue = 100000; break;
+                default: quantityValue = 0; break;
+            }
+
+            const totalPrice = pricePerUnit * (quantityValue / 1000);
+            document.getElementById(`price${id}`).innerText = `Total: Rs. ${totalPrice}`;
+        }
+
+        function validateAndRedirect(id, pricePerUnit) {
+            const quantitySelect = document.getElementById(`quantity${id}`);
+            const quantity = quantitySelect.value;
+            if (!quantity || quantity === "Select Quantity") {
+                alert('Please select a quantity.');
+                return false;
+            }
+            redirectToWhatsApp(id, quantity, pricePerUnit);
+            return false; // Prevent default link behavior
+        }
+
+        function redirectToWhatsApp(id, quantity, pricePerUnit) {
+            let quantityValue = 0;
+
+            switch (quantity) {
+                case '1k': quantityValue = 1000; break;
+                case '2k': quantityValue = 2000; break;
+                case '5k': quantityValue = 5000; break;
+                case '10k': quantityValue = 10000; break;
+                case '20k': quantityValue = 20000; break;
+                case '50k': quantityValue = 50000; break;
+                case '100k': quantityValue = 100000; break;
+                default: quantityValue = 0; break;
+            }
+
+            const totalPrice = pricePerUnit * (quantityValue / 1000);
+            const productName = document.querySelector(`#offer${id} h2`).innerText;
+            const message = `Product Name: ${productName}\nPrice per 1k: Rs. ${pricePerUnit}\nTotal Price: Rs. ${totalPrice}\nPlease confirm the details and proceed.`;
+            const whatsappNumber = '9864808721'; // Your WhatsApp number
+            const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+            window.location.href = whatsappUrl;
+        }
+    </script>
+</body>
+</html>
+
+WhatsApp Number: Updated the WhatsApp number in redirectToWhatsApp to 9864808721.
+Pre-filled Message: The message includes the product name, price per 1k, and total price.
+JavaScript Functions: Updated to ensure correct calculation and redirection with a detailed message.
+When a user selects a quantity and clicks the "Buy Now" button, they will be redirected to WhatsApp with a pre-filled message containing all the relevant details.
